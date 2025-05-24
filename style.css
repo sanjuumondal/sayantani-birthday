@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+:root {
+  --color-pink: #feecea;
+  --color-white: #fff;
+  --color-black: #333;
+  --color-text-pink: #FF7882;
+  --color-heart: #FF7882;
+  --color-bg-letter: #fff8e4;
+  --color-border: #DACCBF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+  background: linear-gradient(var(--color-pink), var(--color-pink));
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--color-black);
+  min-height: 100vh;
+}
+
+#wrapper {
+  width: 100vw;
+  padding: 1rem 0.5rem;
+  min-height: 100vh;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+.flag__birthday {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.flag__birthday img {
+  width: 40vw;
+  max-width: 120px;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.left, .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-family: "Titan One", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.happy, .birthday {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin: 0.2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.1em;
+}
+
+.happy {
+  color: var(--color-white);
+  text-shadow: 2px 2px var(--color-black);
+}
+
+.birthday {
+  color: var(--color-text-pink);
+  text-shadow: 2px 2px var(--color-black);
+}
+
+.hat img {
+  width: 60px;
+  margin: 0.5em 0;
+}
+
+.date__of__birth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-text-pink);
+  border-radius: 30px;
+  border: 2px solid var(--color-black);
+  margin: 0.7em 0;
+  padding: 0.4em 1.2em;
+  font-family: "Sriracha", cursive;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.btn button, #btn__letter {
+  margin-top: 1em;
+  width: 100%;
+  max-width: 320px;
+  background: var(--color-text-pink);
+  color: #fff;
+  border: 2px solid var(--color-black);
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.8em 0;
+  font-family: "Sriracha", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.btn button:active, #btn__letter:active {
+  background: var(--color-heart);
+  border-color: var(--color-heart);
+}
+
+.box__account {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1em;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.box__account .image img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  background: var(--color-text-pink);
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.2em 1em;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  margin-top: 0.5em;
+}
+
+.balloon_one img, .balloon_two img {
+  width: 44px;
+  margin: 0.2em;
+}
+
+.cricle {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.text__cricle {
+  width: 70px;
+  height: 70px;
+  background: var(--color-text-pink);
+  border-radius: 50%;
+  border: 3px solid var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.text__cricle span {
+  font-size: 0.85rem;
+  color: var(--color-white);
+  margin: 0 0.05em;
+}
+
+.fa-heart {
+  color: var(--color-heart);
+  filter: drop-shadow(0 0 2px var(--color-heart));
+  margin-left: 0.2em;
+}
+
+.boxMail {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boxMail.active {
+  display: flex;
+}
+
+.boxMail-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  width: 90vw;
+  max-width: 340px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  text-align: center;
+  position: relative;
+}
+
+.boxMail .fa-xmark {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 1.5rem;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.card1 .userImg img {
+  width: 54px;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+
+.card1 .username {
+  font-size: 1rem;
+  margin: 0.5em 0;
+}
+
+.card2-content h2 {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0.7em 0;
+}
+
+.imageCute img, .imageCute2 img {
+  width: 54px;
+  margin: 0.5em 0;
+}
+
+#copy {
+  text-align: center;
+  padding: 0.7em 0;
+  background: #222;
+  color: #fff;
+  font-size: 0.9rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#copy a {
+  color: #ffb347;
+  text-decoration: none;
+  margin-left: 0.2em;
+}
+
+/* Hide decorative elements on mobile for clarity */
+.decorate_star,
+.decorate_flower--one,
+.decorate_flower--two,
+.decorate_flower--three,
+.decorate_bottom,
+.smiley__icon {
+  display: none !important;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 600px) {
+  .content {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .left, .right {
+    width: 48%;
+  }
+  .flag__birthday img {
+    max-width: 160px;
+  }
+  .boxMail-container {
+    max-width: 500px;
+  }
+}
+
+/* Further reduce font sizes and padding for very small screens */
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .happy, .birthday {
+    font-size: 1.3rem;
+  }
+  .btn button, #btn__letter {
+    font-size: 0.9rem;
+    padding: 0.7em 0;
+  }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade">
+  <meta name="github" content="https://github.com/Aoudumber-Bade">
+  <title>HBD 2.0 | Sulaiman Codes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Mobile-first base styles */
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #222;
+    }
+    #wrapper {
+      max-width: 100vw;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    .flag__birthday {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .flag__birthday img {
+      width: 40vw;
+      max-width: 130px;
+      height: auto;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .left, .right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .title {
+      text-align: center;
+    }
+    .happy, .birthday {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      letter-spacing: 0.1em;
+    }
+    .hat img {
+      width: 70px;
+      margin: 0.5rem 0;
+    }
+    .date__of__birth {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #e67e22;
+    }
+    .btn button {
+      padding: 0.8em 1.5em;
+      font-size: 1rem;
+      border-radius: 6px;
+      background: #ffb347;
+      color: #fff;
+      border: none;
+      margin: 1rem 0;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      width: 100%;
+      max-width: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+    }
+    .box__account {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .box__account .image img {
+      width: 90px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    .box__account .name {
+      font-size: 1.2rem;
+      color: #e74c3c;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+    }
+    .balloon_one img, .balloon_two img {
+      width: 60px;
+      margin: 0.3em;
+    }
+    .cricle {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .text__cricle span {
+      font-size: 1rem;
+      margin: 0 0.1em;
+      color: #f39c12;
+    }
+    .decorate_star, .decorate_flower--one, .decorate_flower--two, .decorate_flower--three, .decorate_bottom, .smiley__icon {
+      display: none; /* Hide decorative elements on mobile for simplicity and speed */
+    }
+    .boxMail {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .boxMail.active {
+      display: flex;
+    }
+    .boxMail-container {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 90vw;
+      max-width: 350px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      text-align: center;
+    }
+    .boxMail .fa-xmark {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      font-size: 1.5rem;
+      color: #e74c3c;
+      cursor: pointer;
+    }
+    .card1 .userImg img {
+      width: 60px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+    .card1 .username {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    .card2-content h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0.7em 0;
+    }
+    .imageCute img, .imageCute2 img {
+      width: 70px;
+      margin: 0.5em 0;
+    }
+    #copy {
+      text-align: center;
+      padding: 0.8em 0;
+      background: #222;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    #copy a {
+      color: #ffb347;
+      text-decoration: none;
+      margin-left: 0.2em;
+    }
+    /* Responsive adjustments for larger screens */
+    @media (min-width: 600px) {
+      .content {
+        flex-direction: row;
+        gap: 2rem;
+      }
+      .left, .right {
+        width: 48%;
+      }
+      .flag__birthday img {
+        max-width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="flag__birthday">
+      <img src="./images/1.png" alt="flag left" class="flag__left">
+      <img src="./images/1.png" alt="flag right" class="flag__right">
+    </div>
+    <div class="content">
+      <div class="left">
+        <div class="title">
+          <h1 class="happy">
+            <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+          </h1>
+          <h1 class="birthday">
+            <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span>
+          </h1>
+          <div class="hat">
+            <img src="./images/hat.png" alt="hat">
+          </div>
+        </div>
+        <div class="date__of__birth">
+          <span></span>
+        </div>
+        <div class="btn">
+          <button id="btn__letter">
+            <div class="mail">
+              Click Here SAYANTANI !!!!! <i class="fa-regular fa-envelope"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="right">
+        <div class="box__account">
+          <div class="image">
+            <img src="./images/RENAMED.png.jpeg" alt="profile">
+          </div>
+          <div class="name">
+            <i class="fa-solid fa-heart"></i>
+            <span>Dear SAYANTANI</span>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="balloon_one">
+            <img src="./images/balloon1.png" alt="balloon 1">
+          </div>
+          <div class="balloon_two">
+            <img src="./images/balloon2.png" alt="balloon 2">
+          </div>
+        </div>
+        <div class="cricle">
+          <div class="text__cricle">
+            <span>h</span><span>a</span><span>p</span><span>p</span><span>y</span><span>-</span>
+            <span>b</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span><span>-</span>
+          </div>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </div>
+    </div>
+    <div class="boxMail">
+      <i class="fa-solid fa-xmark"></i>
+      <div class="boxMail-container">
+        <div class="card1">
+          <div class="userImg">
+            <img src="images/RENAMED.png.jpeg" alt="">
+          </div>
+          <h4 class="username">To: SAYANTANI 💖<span class="underline"></span></h4>
+          <h3>Happy Birthday</h3>
+          <div class="imageCute">
+            <img src="cute1.png" alt="">
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card2-content">
+            <h3>To You!</h3>
+            <h2>
+              Happy Birthday, SAYANTANI! 🥳✨<br>
+              Wishing you a day filled with happiness, love, and all the things that make you smile. 😇🎉<br>
+              I’m truly grateful to have you in my life — your kindness, strength, and genuine heart inspire me every day. 💫<br>
+              Thank you for being such a wonderful presence and always bringing positive energy wherever you go. 💖<br>
+              Here's to celebrating you today and looking forward to everything the future holds. 🥂<br>
+              Many happy returns of the day! 🎂😊
+            </h2>
+            <div class="imageCute2">
+              <img src="cute2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="copy">
+    <p class="text-center text-white text-sm">Youtube<a href="https://www.instagram.com/sanju_mondal21"> @SANJU MONDAL</a></p>
+  </div>
+  <script>
+    // Your existing JavaScript for interactivity
+    let datetxt = "13 June 2008";
+    let date__of__birth = document.querySelector(".date__of__birth span");
+    let charArrDate = datetxt.split('');
+    let currentIndex = 0;
+    setTimeout(function () {
+      let timeDatetxt = setInterval(function () {
+        if (currentIndex < charArrDate.length) {
+          date__of__birth.textContent += charArrDate[currentIndex];
+          currentIndex++;
+        } else {
+          let i = document.createElement("i");
+          i.className = "fa-solid fa-star"
+          document.querySelector(".date__of__birth").prepend(i)
+          document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
+          clearInterval(timeDatetxt)
+        }
+      }, 100)
+    }, 1200)
+    let mailBox = document.querySelector('.mail')
+    let boxmail = document.querySelector('.boxMail')
+    var close = document.querySelector('.fa-xmark')
+    mailBox.onclick = function () {
+      mailBox.classList.toggle('active')
+      boxmail.classList.add('active')
+    }
+    close.addEventListener('click', function () {
+      boxmail.classList.remove('active')
+    })
+  </script>
+</body>
+</html>
